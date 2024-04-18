@@ -6,6 +6,7 @@
 git clone https://github.com/satyam-kr03/defused.git && cd defused
 cd stlit
 conda env create -f testenv.yml
+conda activate testenv
 streamlit run Account.py
 ```
 
