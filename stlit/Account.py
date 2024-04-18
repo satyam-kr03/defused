@@ -13,8 +13,8 @@ import streamlit as st
 os.environ['OAUTHLIB_RELAX_TOKEN_SCOPE'] = "1"
 
 # Copy your credentials from the Google Developers Console
-CLIENT_ID = ''
-CLIENT_SECRET = ''
+CLIENT_ID = '720743198287-ui7uqdi7nfmml7vnca0kasi6cofptev3.apps.googleusercontent.com'
+CLIENT_SECRET = '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'
 
 # Check https://developers.google.com/fit/rest/v1/reference/users/dataSources/datasets/get
 # for all available scopes

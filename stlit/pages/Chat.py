@@ -69,21 +69,16 @@ except FileNotFoundError:
     print("Error: Please Sign In first !")
     exit(1)
 
-from query import fetch_fitness_data
 
-fit_data = fetch_fitness_data(token)
+
+
 
 st.set_option('deprecation.showfileUploaderEncoding', False)
-st.set_page_config(page_title="Advisor", page_icon="🤖", layout="wide")
+st.set_page_config(page_title="Chat", layout="wide")
 # st.set_page_config(layout="wide")
 
 # Streamed response emulator
 def response_generator(prompt):
-    text = ollama.chat(
-    model='medllama2',
-    messages=[{'role': 'user', 'content': prompt}],
-    stream=False
-    )
     text = llm(prompt)
     salt = generate_salt()
     encoded_msg = hash_message(text, str(salt))
